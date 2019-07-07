@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      QR Scanner
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>
+    <button ion-button color="dark" full round (click)="scan()">Start Scan</button>
+  </h1>
+
+  <ion-card *ngIf="hasScaned">
+    <ion-card-content>
+      Scan result: {{ text }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

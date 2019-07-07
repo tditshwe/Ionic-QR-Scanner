@@ -1,0 +1,7 @@
+{
+  "name": "QrCodeScanner",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
