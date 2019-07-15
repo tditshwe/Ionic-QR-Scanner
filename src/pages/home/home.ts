@@ -26,12 +26,14 @@ export class HomePage {
         // camera permission was granted
         // start scanning
         let scanSub = this.qrScanner.scan().subscribe((text: string) => {
-          console.log('Scanned something', text);
+          alert('Scanned something ' + text);
 
           this.text = text;
           this.qrScanner.hide(); // hide camera preview
           scanSub.unsubscribe(); // stop scanning
           this.hasScaned = true;
+        }, (err) => {
+          alert('Error is' + err);
         });
       } else if (status.denied) {
         // camera permission was permanently denied
